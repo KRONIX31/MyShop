@@ -34,30 +34,39 @@ function burgerClick() {
 }
 
 function mobileMenuCatalogOpen1() {
+    const secondScreen = document.querySelector('.mobile_top_menu_flex')
+
     const mobileSubMenu = document.querySelector('#mobile_1')
     const mobileSubMenuNav = document.querySelector('#mobile_nav_1')
     document.querySelector('.prevent_def').preventDefault
     if(mobileSubMenu.style.display === 'none') {
         mobileSubMenu.style.display = 'block'
         mobileSubMenu.style.right = '0'
-        mobileSubMenuNav.style.justifyContent = 'space-between'  
+        mobileSubMenuNav.style.justifyContent = 'space-between'
+        secondScreen.style.display = 'none'
 
     } else {
         mobileSubMenu.style.display = 'none'
         mobileSubMenu.style.right = '100%'
         mobileSubMenuNav.style.justifyContent = 'right'  
+        secondScreen.style.display = 'flex'
     }
+
 }
 function mobileMenuCatalogOpen2() {
+    const earlyScreen = document.querySelector('#mobile_1')
+
     const mobileSubMenu = document.querySelector('#mobile_2')
     const mobileSubMenuNav = document.querySelector('#mobile_nav_2')
     if(mobileSubMenu.style.display === 'none') {
         mobileSubMenu.style.display = 'block'
         mobileSubMenu.style.right = '0'
         mobileSubMenuNav.style.justifyContent = 'space-between'
+        earlyScreen.style.display = 'none'
     } else {
+        mobileSubMenu.style.right = '100%'
         mobileSubMenu.style.display = 'none'
-        mobileSubMenu.style.right = '100%'  
+        earlyScreen.style.display = 'block'
     }
 }
 
