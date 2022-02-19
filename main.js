@@ -8,11 +8,12 @@ function logkey(e){
     top: ${e.clientY}px;`
 } */
 const headerUser = document.querySelector('.header_top_user')
-window.onload = function(e) {
-    if(e.currentTarget.innerWidth <= 980) {
-        headerUser.innerHTML = ''
-    } else {
-        headerUser.innerHTML = headerUser.innerHTML = 'Личный кабинет'
+    document.addEventListener("DOMContentLoaded", ready)
+    function ready(e) {
+if(e.srcElement.defaultView.innerWidth <= 980) {
+    headerUser.innerHTML = ''
+} else {
+    headerUser.innerHTML = 'Личный кабинет'
     }
 }
 window.onresize = function(e) {
@@ -22,6 +23,9 @@ window.onresize = function(e) {
         headerUser.innerHTML = headerUser.innerHTML = 'Личный кабинет'
     }
 }
+
+
+
 
 function burgerClick() {
     const burger = document.querySelectorAll('.icon_menu')
